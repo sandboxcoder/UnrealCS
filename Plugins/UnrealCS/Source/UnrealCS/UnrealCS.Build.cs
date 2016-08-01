@@ -9,7 +9,8 @@ public class UnrealCS : ModuleRules
 		
 		PublicIncludePaths.AddRange(
 			new string[] {
-				"UnrealCS/Public"
+				"UnrealCS/Public",
+                "Programs/UnrealHeaderTool/Public"
 				// ... add public include paths required here ...
 			}
 			);
@@ -18,6 +19,7 @@ public class UnrealCS : ModuleRules
 		PrivateIncludePaths.AddRange(
 			new string[] {
 				"UnrealCS/Private",
+                "Developer/ScriptGeneratorPlugin/Private"
 				// ... add other private include paths required here ...
 			}
 			);
@@ -26,7 +28,8 @@ public class UnrealCS : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core",
+                "Core",
+                "CoreUObject",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
